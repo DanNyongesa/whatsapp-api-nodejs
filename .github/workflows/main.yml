@@ -39,7 +39,7 @@ jobs:
       run: |
         # If your function app project is not located in your repository's root
         # Please change the path to your directory for docker build
-        DOCKER_BUILDKIT=1 docker build -f backend.Dockerfile . -t ${{ env.REGISTRY }}/robopal/whatsapp-api:latest 
+        DOCKER_BUILDKIT=1 docker build -f Dockerfile . -t ${{ env.REGISTRY }}/robopal/whatsapp-api:latest 
         docker push ${{ env.REGISTRY }}/robopal/whatsapp-api:latest
 
     - name: Azure logout
